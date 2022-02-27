@@ -71,6 +71,6 @@ FOOTER
 
 ### Note : The Website is not responsive so better viewable on PCs and bigger screen devices/resolution.
 
-Link- www.scamstory.xyz, https://aditygrg2.github.io/HackmolScamstory/index.html
-Youtube Channel- https://www.youtube.com/watch?v=oWUdVavJQ-4
+Link - www.scamstory.xyz, https://aditygrg2.github.io/HackmolScamstory/index.html
+Youtube Channel - https://www.youtube.com/watch?v=oWUdVavJQ-4
  
