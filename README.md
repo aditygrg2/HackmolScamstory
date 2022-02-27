@@ -21,6 +21,8 @@ Tech Stack used is
 
 - Idea : Scamstory - No more Scamming
 - Problem :
+
+
 1.Internet scams are continually evolving. Consumers in India experienced a fairly high online fraud encounter rate of 69% in the past year. 31% Indians lost money through a scam—the highest globally. There is a lack of scam knowledge and even the most intelligent and educated peeps fall prey to all these techniques.
 
 2.Everyone of us has been a victim or observed a scam in front of us, right? (We are Indians, of course) and it makes all of us feel terrible about that mistake. And we really don't know, where to go, whom to ask for help!
