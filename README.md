@@ -41,13 +41,13 @@ Tech Stack used is
 
 - Future Roadmap :
 
-- Building a diverse community.
+1. Building a diverse community.
 
-- Localising in India in all languages.
+2. Localising in India in all languages.
 
-- Building a database with all scam websites and numbers.
+3. Building a database with all scam websites and numbers.
 
-- Identifying meta and web3 scam.
+4. Identifying meta and web3 scam.
 
 
 ---
