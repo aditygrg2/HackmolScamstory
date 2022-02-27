@@ -1,5 +1,5 @@
 # Hypertext Assassins 
-## Idea - ScamStory
+## Scams?? We Kill Them. We are Scamstory.
 
 Tech Stack used is 
 - Javascript
