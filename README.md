@@ -29,7 +29,7 @@ Tech Stack used is
 
 3. A wide and declining communication gap between government and other help societies regarding scams in our country, makes us so huge winning, with scams !
 
--Solution:
+- Solution:
 
 1. As of now, there are so less resources and less awareness, and we aim to provide as much resources as possible in form of videos, blogs, offline events to make people undestand before they jump into another scam.
 
