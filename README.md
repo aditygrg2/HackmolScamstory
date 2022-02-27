@@ -19,7 +19,7 @@ Tech Stack used is
 ---
 ### Yes to Killing Scams
 
-- Idea : Scamstory : No more Scamming
+- Idea : Scamstory - No more Scamming
 - Problem : Many of us has been a victim or observed a scam in front of us, right? (We are Indians, of course) and it makes all of us feel terrible and shameful about that mistake. And we really don't know, where to go, whom to ask for help! We fail to decide where to report the scam and seek help for the same. A wide and declining communication gap between government and other help societies regarding scams in our country, makes us so huge winning, with scams !
 
 We through Scamstory aim to provide a platform that revolutionarizes the Indian market and creates a Scam free India. It's high time that we surf online without any restrictions.We have a special "share your story" section, helping people to shout out their problems in front of whole word, so that collective action is taken making their voices hear in front of higher authorities. Through this, we ask  details about the scam from people with the vision to provide assistance to them as soon as possible.
