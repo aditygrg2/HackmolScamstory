@@ -35,6 +35,11 @@ Tech Stack used is
 1. As of now, there are so less resources and less awareness, and we aim to provide as much resources as possible in form of videos, blogs, offline events to make people undestand before they jump into another scam.
 
 2. We through our website aims to focus on this bigger issue and help people become more aware of this problem, to help and to make them aware before they took a step in a new arena.
+3. We also have a built in chat bot that will answer all your scam related questions and we organise community interaction where similarly scammed people can have a platform to discuss actions against spam with an expert.
+
+---
+
+-Future Roadmap
 
 ---
 HOME PAGE
