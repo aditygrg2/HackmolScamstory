@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARE STORY WITH US</title>
+    <link href="http://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/google-sans');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Product Sans', sans-serif;
+    }
+
+    .heading {
+        text-align: center;
+        color: red;
+        padding: 10px;
+        font-size: 45px;
+        font-weight: 900;
+        padding-top: 10rem;
+    }
+
+    .bigContainer {
+        display: flex;
+        height: 230vh;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container {
+        max-width: 1200px;
+        background-color: #fff;
+        padding: 35px 40px;
+        border-radius: 6px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        padding: 5px;
+        position: relative;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    input[type="url"],
+    input[type="file"],
+    select {
+        padding: 5px;
+        margin: 3px;
+        width: 100%;
+        height: 40px;
+        border: 2px solid black;
+        --tw-border-opacity: 1;
+        border-color: rgb(248 113 113);
+        border-radius: 6px;
+    }
+
+    p {
+        padding: 4px;
+        text-transform: capitalize;
+    }
+
+    .abc {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    form .button {
+        height: 45px;
+        margin: 45px 0;
+    }
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        color: #fff;
+        background: linear-gradient( 99deg, rgba(115, 18, 81, 1) 10.6%, rgba(28, 28, 28, 1) 118%);
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    form .button input:hover {
+        background: linear-gradient(99deg, rgb(177, 77, 142) 10.6%, rgb(71, 71, 71) 118%);
+    }
+
+    h3 {
+        text-align: center;
+        padding: 3px;
+        font-size: 25px;
+    }
+
+    textarea {
+        text-align: center;
+        padding: 5px;
+        margin: 3px;
+        width: 100%;
+        border: 2px solid black;
+        --tw-border-opacity: 1;
+        border-color: rgb(248 113 113);
+        border-radius: 6px;
+    }
+
+    @media(max-width:584px) {
+        .container {
+            max-width: 100%;
+        }
+        .bigContainer {
+            height: 250vh;
+            max-width: 100%;
+        }
+        .packet {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .heading {
+            position: relative;
+        }
+    }
+</style>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+<script type="module">
+
+
+    
+const firebaseConfig = {
+    apiKey: "AIzaSyBaJv-j6S9eHQIZXEx9F5Uhyfdf4gPzfmM",
+    authDomain: "scamstory-34c02.firebaseapp.com",
+    projectId: "scamstory-34c02",
+    storageBucket: "scamstory-34c02.appspot.com",
+    messagingSenderId: "256338282326",
+    appId: "1:256338282326:web:190b306818a83a87ca78f7",
+    measurementId: "G-31B8G7GBMF"  };
+
+
+
+  // initialize firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+  document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+
+    var type = getElementVal("type");
+    var date = getElementVal("date");
+    var place = getElementVal("place");
+    var contact_way = getElementVal("contact_way");
+    var pincode = getElementVal("pincode");
+    var contactno = getElementVal("contactno");
+    var email = getElementVal("email");
+    var scammersname = getElementVal("scammersname");
+    var website = getElementVal("website");
+    var spammersno = getElementVal("spammersno");
+    var otherdetail = getElementVal("otherdetail");
+    var scamdetail = getElementVal("scamdetail");
+    var proof = getElementVal("proof");
+
+saveMessages(type,date,place,contact_way,pincode, contactno,email,scammersname,website,spammersno,otherdetail,scamdetail,proof);
+
+    alert("Thank you for submitting the form !");
+
+    //   reset the form
+    document.getElementById("contactForm").reset();
+  }
+
+  const saveMessages = (type,date,place,contact_way,pincode, contactno,email,scammersname,website,spammersno,otherdetail,scamdetail,proof) => {
+    var playersRef = firebase.firestore().collection("players");
+    playersRef.add( {
+        type: type,
+        date: date,
+        place: place,
+        contact_way: contact_way,
+        pincode: pincode,
+        contactno: contactno,
+        email: email,
+        scammersname: scammersname,
+        website: website,
+        spammersno: spammersno,
+        otherdetail: otherdetail,
+        scamdetail: scamdetail,
+        proof: proof
+      });
+
+  };
+
+  const getElementVal = (id) => {
+    return document.getElementById(id).value;
+  };
+
+</script>
+
+<body>
+    <div class="text-slate-600 bg-gray-300">
+        <div class="">
+        <ul class="self-center">
+            <img src="images/favicon2.png" class="w-14 h-14 relative top-8 left-2">
+            <a href="index.html"><h1 class="text-4xl absolute left-16 top-10 animate__animated animate__flash" style="font-family: 'Roboto Mono', monospace;">SCAMSTORY</h1></a>
+            <nav class="md:flex flex-row-reverse hidden space-x-4 bottom-4 flex-wrap pr-40"><nbsp></nbsp>
+            <strong><li class="text-center text-lg pb-2 hover:underline hover:text-red-500 relative left-40 bottom-2">Anti-Scam Helpline:<a href="tel:1930"><br>1930</a></li></strong>
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-32 hover:bg-red-600 relative bottom-2"><a href="Login.html"><b>Login/Signup</b></a></button></li>
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-44 hover:bg-red-600 relative bottom-2"><a href="ShareYourStory.html"><b>Share your Story</b></a></button></li>
+            <li><a href="contactus.html" class="hover:underline">Contact Us</a></li>
+            <li><a href="statistics.html" class="hover:underline">Statistics</a></li>
+            <li><a href="blogs.html" class="hover:underline">Blogs</a></li>
+            <li><a href="aboutus.html" class="hover:underline">About Us</a></li>
+            </nav>
+        </ul>
+        </div>
+        </div>
+
+    <div class="bg-slate-50">
+    <p class="heading bg-slate-50">SHARE YOUR STORY WITH US</p>
+    <div class="bigContainer">
+
+        <div class="container">
+            <form action="" method="get" id="contactForm">
+                <div class="packet">
+
+    <p class="abc">
+          <label for="type">WHAT TYPE OF SCAM IS IT?</label>
+          <input type="text" id="type" name="type" placeholder="Enter the name of scam" required>
+    </p>
+    <p class="abc">
+          <label for="date">WHEN DID THIS SCAM HAPPEN TO YOU?</label>
+          <input type="date" id="date" name="date">
+    </p>
+    <p class="abc">
+          <label for="place">WHERE DID THIS SCAM HAPPEN TO YOU?</label>
+          <input type="text" id="place" name="place" placeholder="Enter your city and the State." required>
+    </p>
+    <p class="abc">
+          <label for="contact_way">HOW SCAMMER CONTACTED YOU?</label>
+                <select name="contact_way" id="contact_way">
+                <option value=" ">--Select through which spammer contacted you</option>
+                <option value="website">Website</option>
+                <option value="Call">Call</option>
+                <option value="Message">Message</option>
+                <option value="Meeting offline">Meeting offline</option>
+                <option value="Other">Other</option>
+            </select>
+            </p>
+      <p class="abc">
+            <label for="pincode">PINCODE</label>
+            <input type="number" name="pincode" id="pincode" placeholder="Pincode">
+      </p>
+      <hr>
+      <h2>KINDLY GIVE YOUR PERSONAL DETAILS</h2>
+      <hr>
+      <p class="abc"><label for="name">NAME</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </p>
+      <p class="abc"><labeL for="contact number">CONTACT NUMBER</label>
+     <input type="number" id="contactno" name="contact number" value="contact number" placeholder="Enter you contact number"> </p>
+      <p class="abc">
+      <label for="email">EMAIL ID</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email id"> </p>
+                    <hr>
+                    <h2>SCAMMER DETAILS</h2>
+                    <hr>
+                    <p class="abc"><label for="scammers name">SCAMMER'S NAME</label>
+                        <input type="text" id="scammersname" name="scammers name" placeholder="Enter scammer's name">
+                    </p>
+                    <p class="abc"><label for="webite">SCAMMER'S WEBSITE</label>
+                        <input type="url" id="website" name="website" placeholder="Enter scammer's webite">
+                    </p>
+                    <p class="abc"><label for="spammers no.">SCAMMER'S CONTACT NUMBER</label>
+                        <input type="number" id="spammersno" name="spammers no." placeholder="Enter scammer's contact number">
+                    </p>
+                    <p class="abc"> <label for="other detail">ANY OTHER DETAILS OF SCAMMER</label>
+                        <input type="text" id="otherdetail" name="other detail" placeholder="Enter any other information if you have.">
+                    </p>
+                    <fieldset>
+                      <label for="scam detail">  <h3>DESCRIBE THE SCAM BRIEFLY</h3></label>
+                        <textarea id="scamdetail" name="scam detail" cols="100" rows="8" placeholder="Enter the details of scam"></textarea>
+                    </fieldset>
+                    <p class="abc"><label for="proof">ANY PROOF(optional)</label>
+                        <input type="file" id="proof" name="proof" placeholder="any document,screenshot,photo of scammer">
+                    </p>
+                    <div class="button"><input id="submit" type="submit" value="SUBMIT"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="grid grid-cols-2 pt-10 pb-16 pr-8 sm:text-sm bg-[#091f31] text-white">
+    <div>
+    <div class="logo">
+        <a href="index.html"><img src="images/new.png" class="w-96" alt="logo"></a>
+    </div>
+    </div>
+    <div class="grid grid-cols-4">
+    <div class="General">
+        <strong>General</strong>
+        <div class="grid grid-flow-row pt-6 space-y-5">
+            <a href="Login.html">Sign In</a>
+            <a href="Shareyourstory1.html">Share your story</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us
+            </a>
+        </div>
+    </div>
+    <div class="Resources">
+        <strong>Resources</strong>
+        <div class="grid grid-flow-row pt-6 space-y-5">
+            <a href="blogs.html">Blogs</a>
+            <a href="statistics.html">Statistics</a>
+        </div>
+    </div>
+    <div class="Social">
+        <strong>Social</strong>
+        <div class="grid grid-flow-row pt-6 space-y-5">
+            <a href="https://www.facebook.com/ram.agarwal.3511041/">Facebook</a>
+            <a href="https://twitter.com/AdityGrg">Twitter</a>
+            <a href="https://instagram.com/kashish1_6_?utm_medium=copy_link">Instagram</a>
+        </div>
+    </div>
+    <div class="TypesofScams">
+        <strong>Types of Scams</strong>
+        <div class="grid grid-flow-row pt-6 space-y-5">
+            <a href="InvestmentScam[B].html">Investment Scam</a>
+            <a href="PurchaseScam[B].html">Online Purchase Scam</a>
+            <a href="ImpersonationScam[B].html">Impersonation Scam</a>
+            <a href="CreditScam[B].html">Credit Scam</a>
+            <a href="InternetLoveScam[B].html">Internet Love Scam</a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<hr>
+
+<footer class="w-screen h-10 px-12 pt-2 text-sm text-white bg-[#143552]">
+    <strong>© 2022 Scamstory Hackmol Project</strong>
+    <div class="flex flex-row-reverse w-full h-3 bg-[#143552]">
+    <a class="Terms px-3 relative bottom-4" href="termsandconditions.html">Terms and Conditions</a>
+    <a class="PrivacyPolicy relative bottom-4" href="privacypolicy.html">Privacy Policy</a>
+    </div>
+</footer>
+
+</body>
+<div class="alan-btn"></div>
+<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+    var alanBtnInstance = alanBtn({
+        key: "043123a61921d3282876a252993244882e956eca572e1d8b807a3e2338fdd0dc/stage",
+        onCommand: function(commandData) {
+            if (commandData.command === "go:back") {
+                //call client code that will react on the received command
+            }
+        },
+        rootEl: document.getElementById("alan-btn"),
+    });
+</script>
+</html>

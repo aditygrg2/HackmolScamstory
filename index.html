@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Scamstory - Look for scams and share your story</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon2.png">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+<script type="module">
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBaJv-j6S9eHQIZXEx9F5Uhyfdf4gPzfmM",
+    authDomain: "scamstory-34c02.firebaseapp.com",
+    projectId: "scamstory-34c02",
+    storageBucket: "scamstory-34c02.appspot.com",
+    messagingSenderId: "256338282326",
+    appId: "1:256338282326:web:190b306818a83a87ca78f7",
+    measurementId: "G-31B8G7GBMF"  };
+
+
+
+  // initialize firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+  document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+
+    var email = getElementVal("email");
+
+saveMessages(email);
+
+    alert("Thank you for subscribing to our mailing list!");
+
+    //   reset the form
+    document.getElementById("contactForm").reset();
+  }
+
+  const saveMessages = (email) => {
+    var playersRef = firebase.firestore().collection("newsletter");
+    playersRef.add( {
+        email: email,
+      });
+
+  };
+
+  const getElementVal = (id) => {
+    return document.getElementById(id).value;
+  };
+
+</script>
+<body>
+  
+    <!--Main Element-->
+    <div class="text-white bg-[#091f31]">
+        <div class="">
+        <ul class="self-center">
+            <a href="index.html"><img src="images/favicon2.png" class="w-14 h-14 relative top-8 left-2"></a>
+          <a href="index.html"><h1 class="text-4xl absolute left-16 top-10 animate__animated animate__flash" style="font-family: 'Roboto Mono', monospace;">SCAMSTORY</h1></a>
+            <nav class="md:flex flex-row-reverse hidden space-x-4 bottom-4 flex-wrap"><nbsp></nbsp>
+            <!-- <strong><li class="text-center text-lg pb-2 hover:underline hover:text-red-500 relative left-32 bottom-2">Anti-Scam Helpline:<a href="tel:1930"><br>1930</a></li></strong> -->
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-32 hover:bg-red-600 relative bottom-4 right-4"><a href="Login.html"><b>Login/Signup</b></a></button></li>
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-44 hover:bg-red-600 relative bottom-4 right-4"><a href="Shareyourstory1.html"><b>Share your Story</b></a></button></li>
+            <li><a href="contactus.html" class="hover:underline relative right-44 bottom-2 text-lg">Contact Us</a></li>
+            <li><a href="statistics.html" class="hover:underline relative right-44 bottom-2 text-lg">Statistics</a></li>
+            <li><a href="blogs.html" class="hover:underline relative right-44 bottom-2 text-lg">Blogs</a></li>
+            <li><a href="aboutus.html" class="hover:underline relative right-44 bottom-2 text-lg">About Us</a></li>
+            </nav>
+        </ul>
+        </div>
+        
+        <!-- Mobile menu button -->
+    <div class="md:hidden flex items-center">
+	    <button class="outline-none mobile-menu-button">
+		<svg
+			class="w-6 h-6 text-gray-500"
+			x-show="!showMenu"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+		<path d="M4 6h16M4 12h16M4 18h16"></path>
+		</svg>
+	    </button>
+    </div>
+       
+    
+        <!--Cards-->
+        <div class="w-4/5 mx-auto">
+        <div id="slider" class="swiper-container w-screen">
+            <div class="swiper-wrapper">
+                <!--Container 1-->
+                <div class="swiper-slide bg-cover bg-center shadow-2xl text-white" style="background-image: url('https://images.unsplash.com/photo-1521175776577-f8e0c1e5ecb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2170&q=80');">
+                    <div class="container mx-auto px-6 md:px-20 py-6">
+                        <div class="w-full md:w-1/2">
+                            <div class="md:border border-gray-100 md:p-10">
+                                <h3 class="text-6xl leading-tight" style="font-family: Niconne, cursive;">Online Purchase Scam</h3>
+                                <p class="text-xl pt-10 font-light">Online shopping scams involve scammers pretending to be legitimate online sellers, either with a fake website or a fake ad on a genuine retailer site. </p>
+                            </div>
+                            <div class="my-10 md:mx-10 md:-mt-2"><a href="PurchaseScam[B].html"
+                                    class="bg-pink-500  ease-linear hover:bg-blue-600 text-white px-6 py-4 rounded-full">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container 2-->
+                <div class="swiper-slide bg-cover bg-center shadow-lg text-white" style="background-image: url('https://images.unsplash.com/photo-1504122398460-c635d6377010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="container mx-auto px-6 md:px-20 py-6">
+                        <div class="w-full md:w-1/2">
+                            <div class="md:border border-gray-100 md:p-10">
+                                <h3 class="text-7xl leading-tight" style="font-family: Niconne, cursive;">Internet Love Scam</h3>
+                                <p class="text-xl mt-10 font-light">After befriending an attractive person (who is usually foreign) online, he or she tells a tale about falling into trouble or hard times.</p>
+                            </div>
+                            <div class="my-10 md:mx-10 md:-mt-2"><a href="InternetLoveScam[B].html"
+                                    class="bg-pink-500  ease-linear hover:bg-blue-600 text-white px-6 py-4 rounded-full">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container 3-->
+                <div class="swiper-slide bg-cover bg-center shadow-lg text-white" style="background-image: url('https://images.unsplash.com/photo-1614064744993-dc3650ff1d25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="container mx-auto px-6 md:px-20 py-6">
+                        <div class="w-full md:w-1/2">
+                            <div class="md:border border-gray-100 md:p-10">
+                                <h3 class="text-7xl leading-tight" style="font-family: Niconne, cursive;">Impersonation Scam</h3>
+                                <p class="text-xl mt-10 font-light">Impersonation scams involve criminals pretending to be a trusted organisation such as a bank, the police, a government department or a service provider.</p>
+                            </div>
+                            <div class="my-10 md:mx-10 md:-mt-2"><a href="ImpersonationScam[B].html"
+                                    class="bg-pink-500  ease-linear hover:bg-blue-600 text-white px-6 py-4 rounded-full">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container 4-->
+                <div class="swiper-slide bg-cover bg-center shadow-lg text-white" style="background-image: url('https://images.unsplash.com/photo-1612197527762-8cfb55b618d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80');">
+                    <div class="container mx-auto px-6 md:px-20 py-6">
+                        <div class="w-full md:w-1/2">
+                            <div class="md:border border-gray-100 md:p-10">
+                                <h3 class="text-7xl leading-tight" style="font-family: Niconne, cursive;">Investment Scam</h3>
+                                <p class="text-xl mt-10 font-light">Investment scams involve promises of big payouts, quick money or guaranteed returns. Always be suspicious of any investment opportunities that promise a high return with little or no risk</p>
+                            </div>
+                            <div class="my-10 md:mx-10 md:-mt-2"><a href="InvestmentScam[B].html"
+                                    class="bg-pink-500  ease-linear hover:bg-blue-600 text-white px-6 py-4 rounded-full">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container 5-->
+                <div class="swiper-slide bg-cover bg-center shadow-lg text-white" style="background-image: url('https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');">
+                    <div class="container mx-auto px-6 md:px-20 py-6">
+                        <div class="w-full md:w-1/2">
+                            <div class="md:border border-gray-100 md:p-10">
+                                <h3 class="text-7xl leading-tight" style="font-family: Niconne, cursive;">Credit Scam</h3>
+                                <p class="text-xl mt-10 font-light">Criminals can obtain credit cards by either finding them after they have become lost or stealing them from someone's possession. The thief may not be able to use the lost or stolen card at a point of sale device, which requires a PIN.</p>
+                            </div>
+                            <div class="my-10 md:mx-10 md:-mt-2"><a href="CreditScam[B].html" class="bg-pink-500  ease-linear hover:bg-blue-600 text-white px-6 py-4 rounded-full">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex swiper-button-prev bg-none w-16 h-16 text-xs rounded-full text-pink-500"></div>
+            <div class="hidden md:flex swiper-button-next bg-none w-16 h-16 text-xs rounded-full text-pink-500"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        </div>
+        
+
+        <!--Search-->
+        <div class="grid place-items-center header-color w-screen bg-blue-50 h-96 text-white navelementa">
+        <p class="mx-auto relative text-red-600 top-14 text-4xl animate__animated animate__bounceInLeft">Search for Scams</p>
+        <input type="text" action="searchpage.html" name="" id="searchtext" class="border-2 border-red-600 animate__animated animate__pulse active:border-red-500 px-2 h-12 w-3/4 rounded-t-3xl text-red-500" placeholder="Search for scams...">
+        <button class="border-2 active:border-red-400 border-solid rounded-lg relative bottom-12 bg-red-500 w-20 hover:bg-red-600 text-white"><a href="blogs.html">Search</a></button>
+        </div>
+        <hr>
+
+    <!--Recent stories-->
+   
+<div class="text-red-600 bg-white pt-20 pb-10">
+    <h1 class="text-7xl text-center">How we work?</h1>
+<div class="grid grid-cols-3 gap-1 pt-20 pb-10">
+  <!-- component -->
+<div class="holder overflow-hidden w-96 mt-5 box-border border border-b-4 border-red-600 rounded-r-md shadow-xl mx-auto">
+    <div class="top bg-red-600 text-white p-2 px-4 uppercase">
+    <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+    </svg>
+      Scam Alert
+    </div>
+    <div class="center flex box-border px-6 py-4">
+      <div class="content pt-32 relative bottom-14 text-black">
+        Anyone got scammed or we receive an information of a scam spreading fastly. 
+      </div>    
+    </div>
+  
+    <div class="bottom">
+      <div class="hold flex space-x-2 border-t p-3 mt-3">
+        <div class="border-red-600 mx-auto rounded text-white bg-red-600 text-base cursor-pointer border border-b-4 p-1 px-3 font-bold">
+          <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          Delete
+        </div>
+      </div>    
+    </div>
+  </div>
+  
+  <!-- warning -->
+  
+  <div class="holder overflow-hidden w-96 mt-5 box-border border border-b-4 border-yellow-600 rounded-r-md shadow-xl  mx-auto">
+    <div class="top bg-yellow-600 text-white p-2 px-4 uppercase">
+    <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+    </svg>
+      Analyse
+    </div>
+    <div class="center flex box-border px-6 py-4">
+      <div class="content pt-8 text-black">
+        We analyse the scam report from various legit sources, we work with government hand-in-hand and resolve issues. After getting the authenticity we make people aware of the latest scam and let people know! Guess what? All of this work in just under 24 hours!!
+      </div>    
+    </div>
+  
+    <div class="bottom">
+      <div class="hold flex space-x-2 border-t p-3 mt-3">
+        <div class="border-yellow-600 rounded text-white mx-auto bg-yellow-600 text-base cursor-pointer border border-b-4 p-1 px-3 font-bold">
+          <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          OK
+        </div>
+      </div>    
+    </div>
+  </div>
+  
+  <!-- information -->
+  
+  <div class="holder overflow-hidden w-96 mt-5 box-border border border-b-4 border-green-600 rounded-r-md shadow-xl  mx-auto">
+    <div class="top bg-green-600 text-white p-2 px-4 uppercase">
+      <svg class="inline-block w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      Success
+    </div>
+    <div class="center flex box-border px-6 py-4">
+      <div class="content pt-10 mb-9 text-black">
+       We inform the government authorities, takes all the actions, kills the scam, and the scamsters, spreading fragrance of honesty and scam-free living!
+      </div>    
+    </div>
+  
+    <div class="bottom">
+      <div class="hold flex space-x-2 border-t p-3 mt-3 ml-32">
+        <div class="border-green-600 rounded text-white bg-green-600 text-base cursor-pointer border border-b-4 p-1 px-3 font-bold">
+          <svg class="inline-block w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Done
+        </div>
+      </div>    
+    </div>
+  </div>
+  </div>
+  <!-- Success -->
+  
+</div>
+   
+
+    <!--Check out our blogs-->
+    <strong class="text-6xl px-10 pt-10 text-black">Blogs</strong>
+    <div class="grid grid-cols-3 gap-6 px-10 h-96 pt-10 pb-10 items-center bg-slate-50">
+    <div>
+        <a href="InvestmentScam[B].html" class="block overflow-hidden rounded-2xl">
+        <img class="object-cover w-full h-56" src="https://kvevy2pun5x1fda2s2mbxx09-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/06/InvestmentScam_iStock-479108724_0.jpg" alt="" />
+      
+        <div class="p-4 bg-blue-600">
+          <p class="text-xs text-gray-500"></p>
+      
+          <h5 class="text-sm text-white">Investment Scams</h5>
+      
+          <p class="mt-1 text-sm text-white">Investment scams are on the rise</p>
+        </div>
+      </a>
+    </div>
+
+    <div>
+        <a href="CreditScam[B].html" class="block overflow-hidden rounded-2xl">
+            <img class="object-cover w-full h-56" src="https://www.dignited.com/wp-content/uploads/2018/10/Credit-Card-Fraud.jpg" alt="" />
+          
+            <div class="p-4 bg-blue-600">
+              <p class="text-xs text-gray-500"></p>
+          
+              <h5 class="text-sm text-white">Credit Scam</h5>
+          
+              <p class="mt-1 text-sm text-white">What Is Credit Fraud?</p>
+            </div>
+          </a>
+    </div>
+
+    <div>
+        <a href="PurchaseScam[B].html" class="block overflow-hidden rounded-2xl">
+            <img class="object-cover w-full h-56" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
+          
+            <div class="p-4 bg-blue-600">
+              <p class="text-xs text-gray-500"></p>
+          
+              <h5 class="text-sm text-white">Purchase Scam</h5>
+          
+              <p class="mt-1 text-sm text-white">Lot of websites, lots of buying, and then scams !</p>
+            </div>
+          </a>
+    </div>
+
+    </div>
+
+    <!--Share your story-->
+    <div class="userstory text-center space-y-4 pb-64 mb-10 pt-28 bg-gray-300">
+    <p class="pt-36 text-2xl pl-10 pr-10">Have you been a victim of scams? It is important to share your stories so that others are aware of these scams. Your story may just put a stop to the scam!</p>
+    <button class="border border-red-400 rounded-2xl w-40 h-10 bg-red-500 text-white hover:bg-white hover:text-red-500"><a href="Shareyourstory1.html">Share Your Story</a></button>
+    </div>
+    
+
+    <!--Testimonial Tray-->
+    <strong class="text-6xl px-10 pt-10 pl-10">Our Reviews</strong>
+    <div class="grid grid-cols-3 pt-20 pb-20 snap-start mx-4">
+        <div class="one w-auto flex items-center">
+            <img src="images/Aashi.jpeg" class="w-32 h-32 mx-4 rounded-full">
+            <strong class="px-10">
+                I can't believe I ate the whole thing. This website is gold!<br>
+                <p class="text-slate-400">-Aashi Jain</p>
+            </strong>
+        </div>
+        <div class="two w-auto flex items-center">
+            <img src="images/Ankush.jpeg" class="w-32 h-32 mx-4 rounded-full">
+            <strong class="px-10">
+                <b class="text-red-500">Scamstory</b> helped me to gain access with my phone I lost via online scam.<br>
+                <p class="text-slate-400">-Ankush Agarwal</p>
+            </strong>
+        </div>
+        <div class="three w-auto flex items-center">
+            <img src="images/Vilol.jpeg" class="w-32 h-32 mx-4 rounded-full">
+            <strong class="px-10">
+                Scamstory help me to connect more to the <b class="text-red-500">good</b> digital world<br>
+                <p class="text-slate-400">-Vilol Goyal</p>
+            </strong>
+        </div>
+    </div>
+   
+
+    <!--Subscribe to spam newsletters-->
+     <form id="contactForm" class="flex flex-row justify-center items-center h-36 bg-gray-300">
+        <p class="text-center">Get latest updates on new scams and be aware !</p>
+        <input type="email" id="email" placeholder="Enter your email" class="ml-4 border-2 px-2 h-8 focus:border-red-500 rounded-2xl">
+        <button id="submit" class="border-2 border-red-300 ml-4 w-40 bg-red-500 text-white h-8 hover:text-red-500 hover:bg-white rounded-xl">Submit</button>
+     </form>
+
+    
+
+    <hr>
+
+    <!--Footer Start-->
+    <footer class="grid grid-cols-2 pt-10 pb-16 pr-8 sm:text-sm bg-[#091f31] text-white">
+        <div>
+        <div class="logo">
+            <a href="index.html"><img src="images/new.png" class="w-96" alt="logo"></a>
+        </div>
+        </div>
+        <div class="grid grid-cols-4">
+        <div class="General">
+            <strong>General</strong>
+            <div class="grid grid-flow-row pt-6 space-y-5">
+                <a href="Login.html">Sign In</a>
+                <a href="Shareyourstory1.html">Share your story</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us
+                </a>
+            </div>
+        </div>
+        <div class="Resources">
+            <strong>Resources</strong>
+            <div class="grid grid-flow-row pt-6 space-y-5">
+                <a href="blogs.html">Blogs</a>
+                <a href="statistics.html">Statistics</a>
+            </div>
+        </div>
+        <div class="Social">
+            <strong>Social</strong>
+            <div class="grid grid-flow-row pt-6 space-y-5">
+                <a href="https://www.facebook.com/ram.agarwal.3511041/">Facebook</a>
+                <a href="https://twitter.com/AdityGrg">Twitter</a>
+                <a href="https://instagram.com/kashish1_6_?utm_medium=copy_link">Instagram</a>
+            </div>
+        </div>
+        <div class="TypesofScams">
+            <strong>Types of Scams</strong>
+            <div class="grid grid-flow-row pt-6 space-y-5">
+                <a href="InvestmentScam[B].html">Investment Scam</a>
+                <a href="PurchaseScam[B].html">Online Purchase Scam</a>
+                <a href="ImpersonationScam[B].html">Impersonation Scam</a>
+                <a href="CreditScam[B].html">Credit Scam</a>
+                <a href="InternetLoveScam[B].html">Internet Love Scam</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <hr>
+
+    <footer class="w-screen h-10 px-12 pt-2 text-sm text-white bg-[#143552]">
+        <strong>© 2022 Scamstory Hackmol Project</strong>
+        <div class="flex flex-row-reverse w-full h-3 bg-[#143552]">
+        <a class="Terms px-3 relative bottom-4" href="termsandconditions.html">Terms and Conditions</a>
+        <a class="PrivacyPolicy relative bottom-4" href="privacypolicy.html">Privacy Policy</a>
+        </div>
+    </footer>
+    <!--Footer End-->
+    <script type="text/javascript" src = "index.js"></script>
+    <script type="text/javascript" src = "search.js"></script>
+</body>
+<div class="alan-btn"></div>
+<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+    var alanBtnInstance = alanBtn({
+        key: "043123a61921d3282876a252993244882e956eca572e1d8b807a3e2338fdd0dc/stage",
+        onCommand: function(commandData) {
+            if (commandData.command === "go:back") {
+                //call client code that will react on the received command
+            }
+        },
+        rootEl: document.getElementById("alan-btn"),
+    });
+</script>
+</html>

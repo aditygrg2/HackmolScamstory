@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+</head>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+<script type="module">
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBaJv-j6S9eHQIZXEx9F5Uhyfdf4gPzfmM",
+    authDomain: "scamstory-34c02.firebaseapp.com",
+    projectId: "scamstory-34c02",
+    storageBucket: "scamstory-34c02.appspot.com",
+    messagingSenderId: "256338282326",
+    appId: "1:256338282326:web:190b306818a83a87ca78f7",
+    measurementId: "G-31B8G7GBMF"  };
+
+
+
+  // initialize firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+  document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+
+    var name = getElementVal("name");
+    var phone = getElementVal("phone");
+    var email = getElementVal("email");
+    var subject = getElementVal("subject");
+    var message = getElementVal("message");
+
+
+saveMessages(name,phone,email,subject,message);
+
+    alert("Contact You Soon");
+
+    //   reset the form
+    document.getElementById("contactForm").reset();
+  }
+
+  const saveMessages = (name,phone,email,subject,message) => {
+    var playersRef = firebase.firestore().collection("contactus");
+    playersRef.add( {
+        name: name,
+        phone: phone,
+        email: email,
+        subject: subject,
+        message: message
+      });
+
+  };
+
+  const getElementVal = (id) => {
+    return document.getElementById(id).value;
+  };
+
+</script>
+
+<body>
+    <div class="container">
+        <h1 class="text-6xl">Connect with us</h1>
+        <p>We would love to respond to your queries.<br> Feel free to get in touch with us.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form id="contactForm">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input id="name" type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input id="phone" type="text" placeholder="Enter you number">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input id="email" type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input id="subject" type="text" placeholder="Enter Subject">
+                        </div>
+                    </div>
+
+                    <label>Message</label>
+                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+                    <button id="submit" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach Us</h3>
+
+                <table>
+                    <tr>
+                        <td>Email: </td>
+                        <td>contact@scamstory.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone: </td>
+                        <td>+91 8978989789</td>
+                    </tr>
+
+                    <tr>
+                        <td>Address: </td>
+                        <td>NIT Jalandhar; Punjab</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <a href="index.html" class="goback text-white">Go to Homepage</a>
+</body>
+<div class="alan-btn"></div>
+<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+    var alanBtnInstance = alanBtn({
+        key: "043123a61921d3282876a252993244882e956eca572e1d8b807a3e2338fdd0dc/stage",
+        onCommand: function(commandData) {
+            if (commandData.command === "go:back") {
+                //call client code that will react on the received command
+            }
+        },
+        rootEl: document.getElementById("alan-btn"),
+    });
+</script>
+
+</html>

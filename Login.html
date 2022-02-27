@@ -1,0 +1,390 @@
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<div id="login_div" class="main-div">
+
+    <!-- component -->
+<div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
+  <div
+    class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
+  >
+    <div
+      class="p-4 py-6 text-white bg-red-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
+    >
+      <div class="my-3 text-4xl font-bold tracking-wider text-center">
+        <a href="index.html">SCAMSTORY</a>
+      </div>
+      <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
+        With the power of Scamstory, you can now check for scams for your digital life, while leaving the
+        stress on us!
+      </p>
+      <p class="flex flex-col items-center justify-center mt-10 text-center">
+        <span>Don't have an account?</span>
+        <a href="Register.html" class="underline">Get Started!</a>
+      </p>
+      <p class="mt-6 text-sm text-center text-gray-300">
+        Read our <a href="termsandconditions.html" class="underline">terms and conditions</a>
+      </p>
+    </div>
+    <div class="p-5 bg-white md:flex-1">
+      <h3 class="my-4 text-2xl font-semibold text-gray-700">Account Login</h3>
+      <form action="#" class="flex flex-col space-y-5">
+        <div class="flex flex-col space-y-1">
+          <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
+          <input
+            type="email"
+            id="email_field"
+            autofocus
+            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200"
+          />
+        </div>
+        <div class="flex flex-col space-y-1">
+          <div class="flex items-center justify-between">
+            <label for="password" class="text-sm font-semibold text-gray-500">Password</label>
+            <a href="#" class="text-sm text-red-600 hover:underline focus:text-red-800 hidden">Forgot Password?</a>
+          </div>
+          <input
+            type="password"
+            id="password_field"
+            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200"
+          />
+        </div>
+        <div class="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            id="remember"
+            class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-red-200"
+          />
+          <label for="remember" class="text-sm font-semibold text-gray-500">Remember me</label>
+        </div>
+        <div>
+          <button
+            type="submit"
+            onclick="login()"
+            class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-red-500 rounded-md shadow hover:bg-red-600 focus:outline-none focus:ring-red-200 focus:ring-4"
+          >
+            Log in
+          </button>
+        </div>
+        <div class="flex flex-col space-y-5">
+          <span class="flex items-center justify-center space-x-2">
+            <span class="h-px bg-gray-400 w-14"></span>
+            <span class="font-normal text-gray-500">or login with</span>
+            <span class="h-px bg-gray-400 w-14"></span>
+          </span>
+          <div class="flex flex-col space-y-4">
+            <a
+              href="www.github.com"
+              class="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-gray-800 rounded-md group hover:bg-gray-800 focus:outline-none"
+            >
+              <span>
+                <svg
+                  class="w-5 h-5 text-gray-800 fill-current group-hover:text-white"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="text-sm font-medium text-gray-800 group-hover:text-white">Github</span>
+            </a>
+            <a
+              href="www.twitter.com"
+              class="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 rounded-md group hover:bg-blue-500 focus:outline-none"
+            >
+              <span>
+                <svg class="text-blue-500 group-hover:text-white" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </span>
+              <span class="text-sm font-medium text-blue-500 group-hover:text-white">Twitter</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+<!--jhdgbfjd,hgbdjurgbdkjrbgjkdrbgjkdnrgkjebndgrjkbrkjgbrjkdbgjrbgkjfbgjkbdkr-->
+  <div id="user_div" class="loggedin-div">
+    <div id="user_div" class="loggedin-div">
+      <div class="text-white bg-[#091f31]">
+        <div class="">
+        <ul class="self-center">
+            <a href="index.html"><img src="images/favicon2.png" class="w-14 h-14 relative top-8 left-2"></a>
+            <a href="index.html"><h1 class="text-4xl absolute left-16 top-10 animate__animated animate__flash" style="font-family: 'Roboto Mono', monospace;">SCAMSTORY</h1></a>
+            <nav class="md:flex flex-row-reverse hidden space-x-4 bottom-4 flex-wrap"><nbsp></nbsp>
+            <!-- <strong><li class="text-center text-lg pb-2 hover:underline hover:text-red-500 relative left-32 bottom-2">Anti-Scam Helpline:<a href="tel:1930"><br>1930</a></li></strong> -->
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-32 hover:bg-red-600 relative bottom-4 right-4 hidden"><a href="Login.html"><b>Login/Signup</b></a></button></li>
+            <li><button class="rounded-lg bg-red-500 text-white h-10 w-44 hover:bg-red-600 relative bottom-4 right-4"><a href="Shareyourstory1.html"><b>Share your Story</b></a></button></li>
+            <li><a href="contactus.html" class="hover:underline relative right-80 bottom-2 text-lg">Contact Us</a></li>
+            <li><a href="statistics.html" class="hover:underline relative right-80 bottom-2 text-lg">Statistics</a></li>
+            <li><a href="blogs.html" class="hover:underline relative right-80 bottom-2 text-lg">Blogs</a></li>
+            <li><a href="aboutus.html" class="hover:underline relative right-80 bottom-2 text-lg">About Us</a></li>
+            </nav>
+        </ul>
+        </div>
+        </div>
+
+        <!-- component -->
+<div class="bg-white pt-10 flex justify-center items-center"><div class="w-3/5 bg-red-100 rounded-lg shadow-sm p-5 border-dashed border border-red-500 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0"><div class="flex flex-col sm:flex-row justify-start items-center gap-4"><div class="bg-red-200 flex p-2 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div><div class="text-center sm:text-left"><h1 class="text-gray-700 font-bold tracking-wider">Welcome to Scamstory</h1><p class="text-gray-500 font-semibold">Welcome to the new scam-less arena of our world !</p></div></div><div><button class="bg-red-500 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600"></button></div></div></div>
+
+        <!-- Cards Login -->
+<div class="grid grid-cols-3 pt-20 pb-20">
+  <!--Card 1-->
+<div class="overflow-hidden shadow-lg rounded-lg w-80 md:w-80 cursor-pointer m-auto p-4 bg-indigo-50 transition duration-500 ease-in-out transform hover:translate-y-5 hover:shadow-2xl">
+  <a href="Shareyourstory1.html" class="block">
+      <img alt="blog photo" class="pt-10 pb-10" src="https://media.istockphoto.com/vectors/share-your-story-vector-id1304151692?k=20&m=1304151692&s=612x612&w=0&h=_SB154W5flPl_7Bilp-WkH2Fc7BXCU4Zuvs9MFI1YKc="/>
+      <div class="w-full">
+          <p class="text-red-500 text-md font-medium">
+              Welcome to Scamstory!
+          </p>
+          <p class="text-gray-800 text-xl font-medium mb-2">
+              Share your own Story!
+          </p>
+          <p class="text-gray-600  font-light text-md">
+              You know that how we kill scams. Help us and you, and to world for resolving scams...
+          </p>
+          <div class="flex flex-wrap justify-starts items-center mt-4 border-t-2 pt-5">
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Scam
+              </div>
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Money
+              </div>
+          </div>
+      </div>
+  </a>
+</div>
+
+  <!--Card 2-->
+<div class="overflow-hidden shadow-lg rounded-lg w-80 md:w-80 cursor-pointer m-auto p-4 bg-indigo-50 transition duration-500 ease-in-out transform hover:translate-y-5 hover:shadow-2xl">
+  <a href="blogs.html" class="block">
+      <img alt="blog photo" src="https://www.theminimalists.com/wp-content/uploads/2019/01/how-to-start-a-blog-in-2020-1.jpg" class="max-h-60 w-full pt-10 pb-10 object-cover"/>
+      <div class="w-full">
+          <p class="text-red-500 text-md font-medium">
+              Blogs
+          </p>
+          <p class="text-gray-800  text-xl font-medium mb-2">
+              Check out our recent resource!
+          </p>
+          <p class="text-gray-600  font-light text-md">
+              To start with your journey, we have lot of blogs that may help you in your scamless journey...
+          </p>
+          <div class="flex flex-wrap justify-starts items-center mt-4 border-t-2 pt-5">
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Help
+              </div>
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Blog
+              </div>
+          </div>
+      </div>
+  </a>
+</div>
+
+<!--Card 3-->
+<div class="overflow-hidden shadow-lg rounded-lg w-80 md:w-80 cursor-pointer m-auto p-4 bg-indigo-50 transition duration-500 ease-in-out transform hover:translate-y-5 hover:shadow-2xl">
+  <a href="statistics.html" class="block">
+      <img alt="blog photo" src="https://www.mul.edu.pk/images/programs/bs-statistics_8.jpg" class="max-h-60 w-full object-cover pt-10 pb-10"/>
+      <div class="w-full">
+          <p class="text-red-500 text-md font-medium">
+              Statistics
+          </p>
+          <p class="text-gray-800 text-xl font-medium mb-2">
+              We play with numbers!
+          </p>
+          <p class="text-gray-600  font-light text-md">
+              We have lot of details, micro-checked by our experts, curated by professionals, to help you analyze scams...
+          </p>
+          <div class="flex flex-wrap justify-starts items-center mt-4 border-t-2 pt-5">
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Stats
+              </div>
+              <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-red-200 rounded-2xl">
+                  #Maths
+              </div>
+          </div>
+      </div>
+  </a>
+</div>
+</div>
+
+
+        <footer class="grid grid-cols-2 pt-10 pb-16 pr-8 sm:text-sm bg-[#091f31] text-white">
+          <div>
+          <div class="logo">
+              <img src="images/new.png" class="w-96" alt="logo">
+          </div>
+          </div>
+          <div class="grid grid-cols-4">
+          <div class="General">
+              <strong>General</strong>
+              <div class="grid grid-flow-row pt-6 space-y-5">
+                  <a href="#">Sign In</a>
+                  <a href="#">Share your story</a>
+                  <a href="#">About Us</a>
+                  <a href="#">Contact Us
+                  </a>
+              </div>
+          </div>
+          <div class="Resources">
+              <strong>Resources</strong>
+              <div class="grid grid-flow-row pt-6 space-y-5">
+                  <a href="#">Blogs</a>
+                  <a href="#">Statistics</a>
+              </div>
+          </div>
+          <div class="Social">
+              <strong>Social</strong>
+              <div class="grid grid-flow-row pt-6 space-y-5">
+                  <a href="#">Facebook</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Instagram</a>
+              </div>
+          </div>
+          <div class="TypesofScams">
+              <strong>Types of Scams</strong>
+              <div class="grid grid-flow-row pt-6 space-y-5">
+                  <a href="InvestmentScam[B].html">Investment Scam</a>
+                  <a href="PurchaseScam[B].html">Online Purchase Scam</a>
+                  <a href="ImpersonationScam[B].html">Impersonation Scam</a>
+                  <a href="CreditScam[B].html">Credit Scam</a>
+                  <a href="InternetLoveScam[B].html">Internet Love Scam</a>
+              </div>
+          </div>
+          </div>
+      </footer>
+  
+      <hr>
+  
+      <footer class="w-screen h-10 px-12 pt-2 text-sm text-white bg-[#143552]">
+          <strong>© 2022 Scamstory Hackmol Project</strong>
+          <div class="flex flex-row-reverse w-full h-3 bg-[#143552]">
+          <a class="Terms px-3 relative bottom-4" href="termsandconditions.html">Terms and Conditions</a>
+          <a class="PrivacyPolicy relative bottom-4" href="privacypolicy.html">Privacy Policy</a>
+          </div>
+      </footer>
+      <div class="alan-btn"></div>
+<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+    var alanBtnInstance = alanBtn({
+        key: "043123a61921d3282876a252993244882e956eca572e1d8b807a3e2338fdd0dc/stage",
+        onCommand: function(commandData) {
+            if (commandData.command === "go:back") {
+                //call client code that will react on the received command
+            }
+        },
+        rootEl: document.getElementById("alan-btn"),
+    });
+</script>
+      <button onclick="logout()" style="color:red" class="absolute right-8 top-28">Logout</button>
+    </div>
+</div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    const config = {
+  apiKey: "AIzaSyBaJv-j6S9eHQIZXEx9F5Uhyfdf4gPzfmM",
+  authDomain: "scamstory-34c02.firebaseapp.com",
+  projectId: "scamstory-34c02",
+  storageBucket: "scamstory-34c02.appspot.com",
+  messagingSenderId: "256338282326",
+  appId: "1:256338282326:web:190b306818a83a87ca78f7",
+  measurementId: "G-31B8G7GBMF"
+};
+    firebase.initializeApp(config);
+  </script>
+  <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+
+    document.getElementById("user_div").style.display = "block";
+    document.getElementById("login_div").style.display = "none";
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+
+      var email_id = user.email;
+      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+
+    }
+
+  } else {
+    // No user is signed in.
+
+    document.getElementById("user_div").style.display = "none";
+    document.getElementById("login_div").style.display = "block";
+
+  }
+});
+
+function login(){
+
+  var userEmail = document.getElementById("email_field").value;
+  var userPass = document.getElementById("password_field").value;
+
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+
+}
+
+function logout(){
+  firebase.auth().signOut();
+}
+
+function signin(){
+
+  var userEmail = document.getElementById("email_field").value;
+  var userPass = document.getElementById("password_field").value;
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+}
+  </script>
+
+</body>
+<div class="alan-btn"></div>
+<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+    var alanBtnInstance = alanBtn({
+        key: "043123a61921d3282876a252993244882e956eca572e1d8b807a3e2338fdd0dc/stage",
+        onCommand: function(commandData) {
+            if (commandData.command === "go:back") {
+                //call client code that will react on the received command
+            }
+        },
+        rootEl: document.getElementById("alan-btn"),
+    });
+</script>
+</html>
