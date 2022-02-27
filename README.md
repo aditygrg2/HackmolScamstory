@@ -69,4 +69,4 @@ TERMS AND CONDITIONS
 FOOTER
 ![footer](https://user-images.githubusercontent.com/94540726/155898802-9efb7490-3baf-4c56-b5fd-cceec24ad3d8.png)
 
-###The Website is not responsive.
+### Note : The Website is not responsive !
