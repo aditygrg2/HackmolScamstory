@@ -1,4 +1,3 @@
-![2022-02-28](https://user-images.githubusercontent.com/94540726/155898203-c92815e0-523b-4819-b152-8bf6efeb206f.png)
 # Hypertext Assassins 
 ## Scams? We Kill Them. We are Scamstory !
 
