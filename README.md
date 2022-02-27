@@ -1,3 +1,4 @@
+![2022-02-28](https://user-images.githubusercontent.com/94540726/155898203-c92815e0-523b-4819-b152-8bf6efeb206f.png)
 # Hypertext Assassins 
 ## Scams? We Kill Them. We are Scamstory !
 
@@ -31,3 +32,18 @@ Tech Stack used is
 3.We through our website aims to focus on this bigger issue and help people become more aware of this problem, to help and to make them aware before they took a step in a new arena.
 
 ---
+![home page](https://user-images.githubusercontent.com/94540726/155898690-1661541c-d745-4c3d-b430-2740d8441e4a.png)
+![impersonation scam](https://user-images.githubusercontent.com/94540726/155898704-f9802359-702e-4da6-a278-5b98ab28e689.png)
+![internet scam](https://user-images.githubusercontent.com/94540726/155898714-45165e45-0176-43a3-bc0c-aea7fbd49efa.png)
+![investment scam](https://user-images.githubusercontent.com/94540726/155898720-c965ded3-5278-4dee-9dc6-fdf520a6cc67.png)
+![login](https://user-images.githubusercontent.com/94540726/155898726-a25694eb-ede9-466b-b553-2740d7c5efe9.png)
+![privacy policy](https://user-images.githubusercontent.com/94540726/155898731-a118781b-5765-4063-a486-ec81d70e1f50.png)
+![purchase scam (2)](https://user-images.githubusercontent.com/94540726/155898736-e7f4fd6a-7b9b-490b-ac32-a39aa0e8871e.png)
+![connect with us](https://user-images.githubusercontent.com/94540726/155898747-c652a54a-3758-4ef9-9d13-bf6dd9ffb92f.png)
+![credit scam](https://user-images.githubusercontent.com/94540726/155898753-2dc5bc10-36ff-442e-a01f-a330e635cad5.png)
+![share your story](https://user-images.githubusercontent.com/94540726/155898757-5d970414-a11c-4c40-ab74-5adea2eaf08a.png)
+![sign up](https://user-images.githubusercontent.com/94540726/155898764-45450132-0128-4e26-b070-0b5d04d1e0c4.png)
+![statistics](https://user-images.githubusercontent.com/94540726/155898769-94c6ad11-733e-4761-baed-0992d5d7b27c.png)
+![terms and conditions](https://user-images.githubusercontent.com/94540726/155898773-209bb97d-499c-4cf7-83c4-6b7d899dfd82.png)
+![footer](https://user-images.githubusercontent.com/94540726/155898802-9efb7490-3baf-4c56-b5fd-cceec24ad3d8.png)
+![blogs](https://user-images.githubusercontent.com/94540726/155898857-7556a9d1-24dd-4f22-8ebb-d5979638f446.png)
