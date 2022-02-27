@@ -35,29 +35,15 @@ Tech Stack used is
 1. As of now, there are so less resources and less awareness, and we aim to provide as much resources as possible in form of videos, blogs, offline events to make people undestand before they jump into another scam.
 
 2. We through our website aims to focus on this bigger issue and help people become more aware of this problem, to help and to make them aware before they took a step in a new arena.
-3. We also have a built in chat bot that will answer all your scam related questions and we organise community interaction where similarly scammed people can have a platform to discuss actions against spam with an expert.
-
----
-
-- Future Roadmap :
-
-1. Building a diverse community.
-
-2. Localising in India in all languages.
-
-3. Building a database with all scam websites and numbers.
-
-4. Identifying meta and web3 scam.
-
 
 ---
 HOME PAGE
 ![home page](https://user-images.githubusercontent.com/94540726/155898690-1661541c-d745-4c3d-b430-2740d8441e4a.png)
 
 TYPES OF SCAMS
-1)![impersonation scam](https://user-images.githubusercontent.com/94540726/155898704-f9802359-702e-4da6-a278-5b98ab28e689.png)
-2)![internet scam](https://user-images.githubusercontent.com/94540726/155898714-45165e45-0176-43a3-bc0c-aea7fbd49efa.png)
-3)![credit scam](https://user-images.githubusercontent.com/94540726/155898753-2dc5bc10-36ff-442e-a01f-a330e635cad5.png)
+1)![image](https://user-images.githubusercontent.com/96407263/155901127-468c9593-557f-49db-bf29-a83d0001de78.png)
+2)!![image](https://user-images.githubusercontent.com/96407263/155901161-b46af07e-5fde-4ac3-a144-33d7d3bbafef.png)
+3)![image](https://user-images.githubusercontent.com/96407263/155901177-309f7761-034e-4bd7-baaf-34e988793735.png)
 
 LOGIN PAGE
 ![login](https://user-images.githubusercontent.com/94540726/155898726-a25694eb-ede9-466b-b553-2740d7c5efe9.png)
@@ -84,3 +70,7 @@ FOOTER
 ![footer](https://user-images.githubusercontent.com/94540726/155898802-9efb7490-3baf-4c56-b5fd-cceec24ad3d8.png)
 
 ### Note : The Website is not responsive so better viewable on PCs and bigger screen devices/resolution.
+
+Link- www.scamstory.xyz, https://aditygrg2.github.io/HackmolScamstory/index.html
+Youtube Channel- https://www.youtube.com/watch?v=oWUdVavJQ-4
+ 
