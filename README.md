@@ -15,7 +15,7 @@ Tech Stack used is
 - Team Code : a753b22c02
 - Team Name : Hypertext Assassins
 - IsFresher: True
-- Team Members name: Aditya Garg, Ankush Agarwal, Aashi Jain, Vilol Garg, Kashish Mangal.
+- Team Members name: Aditya Garg, Ankush Agarwal, Aashi Jain, Vilol Goyal, Kashish Mangal.
 
 ---
 ### Yes to Killing Scams
