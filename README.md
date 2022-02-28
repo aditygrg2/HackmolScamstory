@@ -7,7 +7,6 @@ Tech Stack used is
 - Tailwind CSS
 - Firebase
 - Alan AI
-- Agora AI
 - Node JS
 
 ---
