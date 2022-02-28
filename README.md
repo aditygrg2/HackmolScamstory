@@ -36,6 +36,9 @@ Tech Stack used is
 
 2. We through our website aims to focus on this bigger issue and help people become more aware of this problem, to help and to make them aware before they took a step in a new arena.
 
+3. We also have a built in chat bot that will answer all your scam related questions and we organise community interaction where similarly scammed people can have a platform to discuss actions against spam with an expert.
+
+
 ---
 HOME PAGE
 ![home page](https://user-images.githubusercontent.com/94540726/155898690-1661541c-d745-4c3d-b430-2740d8441e4a.png)
