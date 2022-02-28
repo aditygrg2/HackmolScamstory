@@ -1,23 +1,24 @@
-# Hypertext Assassins 
+# Hypertext Assassins 🤺
 ## Scams? We Kill Them. We are Scamstory !
 
 Tech Stack used is 
-- Javascript
+- Javascript 
 - HTML
 - Tailwind CSS
 - Firebase
 - Alan AI
+- Agora AI
 - Node JS
 
 ---
- Team details
+ Team details 🧑‍💻
 - Team Code : a753b22c02
 - Team Name : Hypertext Assassins
 - IsFresher: True
 - Team Members name: Aditya Garg, Ankush Agarwal, Aashi Jain, Vilol Goyal, Kashish Mangal.
 
 ---
-### Yes to Killing Scams
+### Yes to Killing Scams ✅
 
 - Idea : Scamstory - No more Scamming
 - Problem :
@@ -39,6 +40,9 @@ Tech Stack used is
 
 
 ---
+
+# Screenshots of our website - 
+
 HOME PAGE
 ![home page](https://user-images.githubusercontent.com/94540726/155898690-1661541c-d745-4c3d-b430-2740d8441e4a.png)
 
