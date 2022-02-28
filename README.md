@@ -7,10 +7,10 @@ Tech Stack used is
 - Tailwind CSS
 - Firebase
 - Alan AI
-- Agora AI
 - Node JS
 
 ---
+
  Team details 🧑‍💻
 - Team Code : a753b22c02
 - Team Name : Hypertext Assassins
@@ -20,8 +20,9 @@ Tech Stack used is
 ---
 ### Yes to Killing Scams ✅
 
-- Idea : Scamstory - No more Scamming
-- Problem :
+- Idea : Scamstory - No More Scamming 
+
+- Problem 🚨 :
 
 
 1. Internet scams are continually evolving. Consumers in India experienced a fairly high online fraud encounter rate of 69% in the past year. 31% Indians lost money through a scam—the highest globally. There is a lack of scam knowledge and even the most intelligent and educated peeps fall prey to all these techniques.
@@ -30,7 +31,7 @@ Tech Stack used is
 
 3. A wide and declining communication gap between government and other help societies regarding scams in our country, makes us so huge winning, with scams !
 
-- Solution:
+- Solution 🏄🏼‍♂️ :
 
 1. As of now, there are so less resources and less awareness, and we aim to provide as much resources as possible in form of videos, blogs, offline events to make people undestand before they jump into another scam.
 
@@ -40,6 +41,10 @@ Tech Stack used is
 
 
 ---
+
+## Website Link 🔗 - www.scamstory.xyz
+
+### Video Link 🎥 - https://www.youtube.com/watch?v=oWUdVavJQ-4
 
 # Screenshots of our website - 
 
@@ -75,9 +80,5 @@ TERMS AND CONDITIONS
 FOOTER
 ![footer](https://user-images.githubusercontent.com/94540726/155898802-9efb7490-3baf-4c56-b5fd-cceec24ad3d8.png)
 
-### Note : The Website is not responsive so better viewable on PCs and bigger screen devices/resolution.
-
-Link - www.scamstory.xyz, https://aditygrg2.github.io/HackmolScamstory/index.html
-
-Youtube Channel - https://www.youtube.com/watch?v=oWUdVavJQ-4
+### Note : The website is not responsive so better viewable on PCs and bigger screen devices/resolution.
  
